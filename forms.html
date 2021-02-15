@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <title>Form Example</title>
+</head>
+<body class="bg-light">
+    <header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="main.html">Home</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				  <li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="forms.html">Forms</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="table.html">Table</a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					  Dropdown
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <li><a class="dropdown-item" href="https://sifo.comillas.edu/">Ir a Moodle</a></li>
+					  <li><a class="dropdown-item" href="https://google.com">Ir a Google</a></li>
+					  <li><hr class="dropdown-divider"></li>
+					  <li><a class="dropdown-item" href="#">Este no hace nada</a></li>
+					</ul>
+				  </li>
+				</ul>
+				<form class="d-flex">
+				  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				  <button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			  </div>
+			</div>
+		  </nav>
+	</header>
+
+    <div class="container">
+        <div class="py-5 text-center">  <!-- add 5 units of padding-->
+            <h2>Checkout Form</h2>
+            <p class="lead">Example of a checkout form.</p>
+        </div>
+        
+        <h4 class="mb-3">Billing address</h4>   <!-- margin bottom 3 units-->
+
+        <form novalidate>
+            <div class="row g-3">
+                <div class="col-sm-6">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input id="firstName" type="text" class="form-control" placeholder="Jaime" required>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input id="lastName" type="text" class="form-control" placeholder="Arana" required>
+                    <div class="invalid-feedback">
+                        Valid last name is requiered.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text">@</span>
+                        <input id="username" type="text" class="form-control" placeholder="jaimearana" required>
+                    </div>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <label for="country" class="form-label">Country</label>
+                    <select id="country" class="form-control">
+                        <option value="">Choose..</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="USA">USA</option>
+                        <option value="Spain">Spain</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <label for="city" class="form-label">City</label>
+                    <select id="city" class="form-control">
+                        <option value="">Choose..</option>
+                        <option value="Australia">Melbourne</option>
+                        <option value="Austria">Wien</option>
+                        <option value="USA">Washington</option>
+                        <option value="Spain">Madrid</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="postcode" class="form-label">Postcode</label>
+                    <input type="number" id="postcode" class="form-control" placeholder="1234" required>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="col-12">
+                    <div class="form-check">
+                        <input type="checkbox" id="sameAddress" class="form-check-input">
+                        <label for="sameAddress" class="form-check-label">Shipping address the same as billing.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="safeInfo" class="form-check-input">
+                        <label for="safeInfo" class="form-check-label">Safe this information.</label>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <!--payment sction-->
+
+                <h4 class="mb-3">Payments</h4>
+
+                <div class="form-check">
+                    <input id="credirCard" type="radio" class="form-check-input" checked required>
+                    <label for="creditCard">Credit Card</label>
+                </div>
+
+                <div class="form-check">
+                    <input id ="directDebit" type="radio" class="form-check-input" required>
+                    <label for="directDebit">Debit Card</label>
+                </div>
+
+                <div class="form-check">
+                    <input id ="paypal" type="radio" class="form-check-input" required>
+                    <label for="paypal">Paypal</label>
+                </div>
+
+                <div class="row my-3 gy-3">
+                    <div class="col-md-6">
+                        <label for="fullName">Name on card</label>
+                        <input type="text" class="form-control">
+                        <small class="text-muted">Full name as displayed on card.</small>
+                        <div class="invalid-feedback">Name on card is required.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="cardNumber">Credit Card Number</label>
+                        <input id="cardNumber" type="text" class="form-control">
+                        <div class="invalid-feedback">Credit card number is required.</div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="expirationDate">Expiration date</label>
+                        <input id="expirationDate" type="text" class="form-control">
+                        <div class="invalid-feedback">Expiration is required.</div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="cvv">CVV</label>
+                        <input id="cvv" type="text" class="form-control">
+                        <div class="invalid-feedback">CVV is required.</div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <button type="button" class="btn btn-primary btn-lg btn-block">Continue to checkout</button>
+            </div>
+        </form>
+    </div>
+
+    <hr class="divider my-5">
+
+    <footer class="footer mt-auto py-3 bg-light">
+		<div class="container">
+			<p class="float-end"><a href="#">Back to top</a></p>
+			<span class="text-muted">Sticky footer content here.</span>
+		</div>
+	</footer>
+</body>
+</html></html>
